@@ -1,0 +1,55 @@
+.kotak{
+    width: 300px;
+    height:150px ;
+    padding: 20px;
+    border: 2px solid rgb(176, 176, 67);
+    margin:  30px;
+    box-sizing: border-box;
+}
+
+/*warna berbeda untuk tiap kotak*/
+.satu{
+    background-color: rgb(161, 8, 8);
+}
+
+.dua{
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>box model project</title>
+        <link rel="stylesheet" href="style1.css">
+    </head>
+    <body>
+        <div class="kotak satu"></div>
+        <div class="kotak dua"></div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
