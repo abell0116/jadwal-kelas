@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Looping di JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            padding: 20px;
+            color: bisque;
+        }
+        h1, h2 {
+            color: bisque;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            color: black;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .output {
+            margin-top: 10px;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Belajar Looping Bersama ABELLL</h1>
+
+    <h2>1. Loop For</h2>
+    <p>Digunakan jika ingin mengulang sebanyak yang ditentukan, misalnya 5 kali.</p>
+    <pre>
+for(let i = 1; i <= 5; i++){
+    console.log("halo ke-" + i);
+}
+    </pre>
+    <button onclick="loopfor()">Jalankan For Loop</button>
+    <div class="output" id="output"></div>
+
+    <h2>2. Loop For...in</h2>
+    <p>Digunakan untuk mengambil indeks dari array.</p>
+    <pre>
+let buah = ["apel", "pisang", "jambu"];
+for (let i in buah) {
+    console.log("Index ke-" + i + " adalah " + buah[i]);
+}
+    </pre>
+    <button onclick="loopforin()">Jalankan For...in</button>
+    <div class="output" id="outpuforin"></div>
+
+    <h2>3. Loop For...of</h2>
+    <p>Digunakan untuk mengambil nilai langsung dari array.</p>
+    <pre>
+let buah = ["apel", "pisang", "jambu"];
+for (let b of buah) {
+    console.log("saya suka " + b);
+}
+    </pre>
+    <button onclick="loopforof()">Jalankan For...of</button>
+    <div class="output" id="outputforof"></div>
+
+    <h2>4. Loop While</h2>
+    <p>Digunakan saat kita ingin mengulang selama kondisi masih benar.</p>
+    <pre>
+let i = 0;
+while (i < 5) {
+    console.log("nomor: " + i);
+    i++;
+}
+    </pre>
+    <button onclick="loopwhile()">Jalankan While</button>
+    <div class="output" id="outputwhile"></div>
+
+    <h2>5. Loop Do...While</h2>
+    <p>Mirip while, tapi dijalankan dulu sekali baru dicek kondisinya.</p>
+    <pre>
+let i = 0;
+do {
+    console.log("nilai: " + i);
+    i++;
+} while (i < 5);
+    </pre>
+    <button onclick="loopdowhile()">Jalankan Do While</button>
+    <div class="output" id="outputdowhlie"></div>
+
+    <script>
+        function loopfor() {
+            let hasil = "";
+            for (let i = 1; i <= 5; i++) {
+                hasil += `halo ke-${i}<br>`;
+            }
+            document.getElementById("output").innerHTML = hasil;
+        }
+
+        function loopforin() {
+            let buah = ["apel", "pisang", "jambu"];
+            let hasil = "";
+            for (let i in buah) {
+                hasil += `Index ke-${i} adalah ${buah[i]}<br>`;
+            }
+            document.getElementById("outpuforin").innerHTML = hasil;
+        }
+
+        function loopforof() {
+            let buah = ["apel", "pisang", "jambu"];
+            let hasil = "";
+            for (let b of buah) {
+                hasil += `Saya suka ${b}<br>`;
+            }
+            document.getElementById("outputforof").innerHTML = hasil;
+        }
+
+        function loopwhile() {
+            let i = 0;
+            let hasil = "";
+            while (i < 5) {
+                hasil += `Nomor: ${i}<br>`;
+                i++;
+            }
+            document.getElementById("outputwhile").innerHTML = hasil;
+        }
+
+        function loopdowhile() {
+            let i = 0;
+            let hasil = "";
+            do {
+                hasil += `Nilai: ${i}<br>`;
+                i++;
+            } while (i < 5);
+            document.getElementById("outputdowhlie").innerHTML = hasil;
+        }
+    </script>
+</body>
+</html>
